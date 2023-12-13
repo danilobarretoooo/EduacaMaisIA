@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PortalAlunoApplication<portalAluno>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.danilobarreto.portalaluno.PortalAlunoApplication",
+            "projectName": "portalAluno",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

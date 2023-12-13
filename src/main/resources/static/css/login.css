@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.Login-Form{ min-height: 800px; background-image: url('/img/bg.jpeg');
+    background-position: center; background-size: cover; background-repeat: no-repeat;
+}
+
+.Login-Form{ display: flex; align-items: center; flex-direction: row; flex-wrap: wrap; justify-content: center; text-align: center;}
+
+.main-div{ background: #fff; border-radius: 5px; margin: 0 auto; max-width: 50%; padding: 50px 70px; background-image: url('/img/vaga-logo.jpeg'); background-repeat: no-repeat; background-size: 135px;}
+
+.form-control{background-color: #f7f7f7; border-radius: 7px; font-size: 15px; height: 50px; line-height: 50px;
+border: 2px solid #d4d4d4;}
+
+
+.form-group{ margin: 15px;}
+
+.btn.btn-primary{
+    background-color: #512DA8;
+    border-color: #d4d4d4;
+    font-size: 1.1em;
+    padding: 0;
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+}
+    .btn.btn-info{
+    background-color: #7E57C2;
+    border-color: #d4d4d4;
+    font-size: 1em;
+    padding: 0;
+    height: 40px;
+    width: 50%;
+}
+

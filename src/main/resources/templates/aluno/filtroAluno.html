@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scalet=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <title>Encontrar Aluno</title>
+    <meta name="author" content="Danilo Barreto"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntus&family=Work+">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fca704 ; height: 200px;">
+        <a class="navbar-brand" href="#">
+           
+                 <img src="\img\RS logo elegante minimalista preto branco e verde musgo (1).png" style="height: 250px;"  alt="Minha Imagem">
+               
+           
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navMobile" class="navbar-collapse collapse justify-content-end">
+            <a th:href="@{/index}"class="btn-nav nav-item nav-link"><i class="fas fa-home"></i> Home</a>
+            <a th:href="@{/cadastrar}" class="btn-nav nav-item nav-link"><i class="fas fa-user-graduate"></i> Cadastrar
+                Aluno</a>
+            <a th:href="@{/filtro-aluno}" class="btn-nav nav-item nav-link"><i class="fas fa-search"></i> Pesquisar
+                Aluno</a>
+        </div>
+
+    </nav>
+
+    <hr>
+
+<div class="container-filtros">
+    <div class="floating-card" style="left: 5%;"><!-- Aluno ativos-->
+    <div class="row">
+        <div class="card ml-3">
+            <a th:href="@{/alunos-ativos}"> <img class="card-img-top" src="\img\Ativos.jpg"/></a>
+            <div class="card-body">
+                <h5 class="card-title">Alunos Ativos</h5>
+                <p class="card-text">Busque por todos os alunos que estão ativos no sistema.</p>
+                <div class="botaocard">
+                <a th:href="@{/alunos-ativos}" class="btn btn-outline-primary">Clique Aqui!</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div> 
+    <div class="floating-card" style="left: 25%;"><!-- Alunos Inativos -->
+
+     <div class="card ml-3">
+        <a th:href="@{/alunos-inativos}"><img class="card-img-top" src="\img\Inativo.png"/></a>
+        <div class="card-body">
+            <h5 class="card-title">Alunos Inativos </h5>
+            <p class="card-text">Busque por todos os alunos que estão inativos no sistema.</p>
+            <div class="botaocard">
+            <a th:href="@{/alunos-inativos}" class="btn btn-outline-primary">Clique Aqui!</a>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="floating-card" style="left: 45%;"><!-- Alunos Trancados -->
+
+        <div class="card ml-3" >
+            <a th:href="@{/alunos-trancados}"><img class="card-img-top" src="\img\trancado.avif"/></a>
+            <div class="card-body">
+                <h5 class="card-title">Alunos Trancados </h5>
+                <p class="card-text">Busque por todos os alunos que estão trancados no sistema.</p>
+                <div class="botaocard">
+                    <a th:href="@{/alunos-trancados}" class="btn btn-outline-primary">Clique Aqui!</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="floating-card" style="left: 65%;">  <!-- Alunos Cancelados -->
+        <div class="card ml-3">
+            <a th:href="@{/alunos-cancelados}"><img class="card-img-top" src="\img\Cancelados_2.avif"/> </a>
+            <div class="card-body">
+                <h5 class="card-title">Alunos Cancelados</h5>
+                <p class="card-text">Busque por todos os alunos que estão cancelados no sistema.</p>
+                <div class="botaocard">
+                <a th:href="@{/alunos-cancelados}" class="btn btn-outline-primary">Clique Aqui!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+    <script src="js/main.js"></script>
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</header>
+
+</body>
+</html>

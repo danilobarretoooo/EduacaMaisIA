@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT - Página de Chat</title>
+    <style>
+        #chat-container {
+            height: 300px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ChatGPT - Página de Chat</h1>
+
+    <div id="chat-container"></div>
+
+    <label for="pergunta">Sua pergunta:</label>
+    <input type="text" id="pergunta" placeholder="Digite sua pergunta...">
+    <button onclick="enviarPergunta()">Enviar</button>
+
+    <script>
+        function enviarPergunta() {
+            var pergunta = document.getElementById('pergunta').value;
+            adicionarMensagemUsuario(pergunta);
+            obterResposta(pergunta);
+        }
+
+        function adicionarMensagemUsuario(pergunta) {
+            var chatContainer = document.getElementById('chat-container');
+            chatContainer.innerHTML += '<p><strong>Você:</strong> ' + pergunta + '</p>';
+            chatContainer.scrollTop = chatContainer.scrollHeight; // Rolagem automática para a parte inferior
+        }
+
+        function adicionarRespostaChatGPT(resposta) {
+            var chatContainer = document.getElementById('chat-container');
+            chatContainer.innerHTML += '<p><strong>ChatGPT:</strong> ' + resposta + '</p>';
+            chatContainer.scrollTop = chatContainer.scrollHeight; // Rolagem automática para a parte inferior
+        }
+
+        function obterResposta(pergunta) {
+            // Substitua a URL abaixo pelo endpoint real do seu controller Spring
+            var endpointUrl = 'http://localhost:8080/chatgpt/resposta/' + encodeURIComponent(pergunta);
+
+            // Faz uma solicitação GET usando JavaScript Fetch API
+            fetch(endpointUrl)
+                .then(response => response.text())
+                .then(data => {
+                    adicionarRespostaChatGPT(data);
+                })
+                .catch(error => {
+                    console.error('Erro ao consumir o endpoint:', error);
+                    adicionarRespostaChatGPT('Erro ao obter resposta.');
+                });
+        }
+    </script>
+
+</body>
+</html>
