@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Danilo Barreto"/>
     <title>EducaMaisIA</title>
-    <link rel="stylesheet" href="/static/css/chat.css">
+    <link rel="stylesheet" href="css/chat.css">
     <script src="https://kit.fontawesome.com/006642858d.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntus&family=Work+">
 
 </head>
 <body>
 <div class="container mt-5">
-    <h1>OpenAI Chat Interface</h1>
-    <form th:action="@{/text}" th:object="${textGenerate}" method="post">
+    <h1>EducaMaisIA Chat Interface</h1>
+    <form th:action="@{/chat}" th:object="${textGenerate}" method="post">
         <div class="form-group">
             <label for="text">Texto:</label>
-            <input type="text" class="form-control" id="text" th:field="*{text}" placeholder="Digite seu texto" required>
+            <input type="text" class="form-conßtrol" id="text" th:field="*{text}" placeholder="Digite seu texto" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Gerar Texto</button>

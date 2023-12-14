@@ -1,20 +1,34 @@
 @charset "UTF-8";
-*{margin: 0; padding: 0; box-sizing: border-box}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
 
-nav{height: 150px; color: #ffffff; text-transform: uppercase}
-a{cursor: pointer; font-weight: bold; color: #fff }
+nav {
+    height: 150px;
+    color: #ffffff;
+    text-transform: uppercase
+}
 
-a.btn-nav:hover{
-    color: #BA68C8
+a {
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff
+}
+
+a.btn-nav:hover {
+    color: maroon;
 
 }
-.navbar-brand{
+
+.navbar-brand {
     border-radius: 50px;
     border: 2px solid;
-  overflow: hidden;
-  object-fit: cover;
-  width: 250px ;
-  height: 170px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 250px;
+    height: 170px;
 }
 
 /* Tela de cadastro
@@ -22,10 +36,10 @@ a.btn-nav:hover{
 
 
 /* botões dos cards*/
-.botaocard{
+.botaocard {
     width: 100px;
     height: 50px;
-    
+
     transition: width 0.3s ease, height 0.3s ease;
     display: flex;
     justify-content: center;
@@ -35,31 +49,35 @@ a.btn-nav:hover{
     background: linear-gradient(to right, #ff8c00, #ff4500);
     border-radius: 15px;
 }
-.botaocard:hover{
+
+.botaocard:hover {
     align-items: center;
     width: 150px;
     height: 75px;
     background: linear-gradient(to right, #ff4500, #ff8c00);
 
 }
+
 /* botões dos cards*/
 /* */
-.body-fitros{
-     margin: 0;
+.body-fitros {
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
-    overflow: hidden;}
+    overflow: hidden;
+}
 
-    .conteiner-filtros{
-            position: relative;
-            width: 100%;
-            height: 100%;
-        
-    }
+.conteiner-filtros {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
 /*card flutuante */
 .floating-card {
     position: absolute;
@@ -71,7 +89,7 @@ a.btn-nav:hover{
 }
 
 .floating-card:hover {
-    animation: none; 
+    animation: none;
 }
 
 @keyframes floatAnimation {
@@ -82,22 +100,26 @@ a.btn-nav:hover{
         transform: translateY(-20px);
     }
 }
-.card ml-3{
+
+.card ml-3 {
     width: 250px;
-    height: 200px;
-  
-}
-.card-img-top{
     height: 200px;
 
 }
-.card-body.a{
+
+.card-img-top {
+    height: 200px;
+
+}
+
+.card-body.a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /*card flutuante */
-.neo-section{
+.neo-section {
     min-height: 700px;
     background-size: cover !important;
     background-position: center;
@@ -106,38 +128,98 @@ a.btn-nav:hover{
     padding: 30px;
     position: relative;
 }
-.wm{width: 50%; float: left;}
-.clear{clear: both; }
-.center{text-align: center}
-.neon-container{max-width: 1280px; padding: 2% 2%; margin: 0 auto}
-.sombra{width: 100%; height: 100%; top: 0; left: 0; position: absolute; background: rgba(0,0,0,0.7); z-index: 100}
+
+.wm {
+    width: 50%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    text-align: center
+}
+
+.neon-container {
+    max-width: 1280px;
+    padding: 2% 2%;
+    margin: 0 auto
+}
+
+.sombra {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100
+}
+
 .neo-section > .neon-container {
     position: relative;
     z-index: 105;
 }
-.texto-centro{
-    color: white; font-size: 3em;
+
+.texto-centro {
+    color: white;
+    font-size: 3em;
 }
-.btnGroup{
+
+.btnGroup {
     padding: 7px;
     border-radius: 8px;
 }
 
-.btn{width: 85px; color: black; border-color: transparent; padding: 5px; font-weight: bold;
+.btn {
+    width: 85px;
+    color: black;
+    border-color: transparent;
+    padding: 5px;
+    font-weight: bold;
 }
-.botoes{padding: 2% 5%;}
-.btn:hover{color: #fff; background-color: transparent; border-color: transparent; align-content: center;}
-.rodape{color: #fff; background-color: #4527A0; text-align: center; font-size: 1.25em; padding: 12px}
+
+.botoes {
+    padding: 2% 5%;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+    align-content: center;
+}
+
+.rodape {
+    color: #fff;
+    background-color: #4527A0;
+    text-align: center;
+    font-size: 1.25em;
+    padding: 12px
+}
 
 /* Responsividade */
-@media screen and (max-width: 667px){
-    .wm{width: 100%}
-    .nav{height: 100%}
-    .neon-container{margin-top: 120px}
+@media screen and (max-width: 667px) {
+    .wm {
+        width: 100%
+    }
+
+    .nav {
+        height: 100%
+    }
+
+    .neon-container {
+        margin-top: 120px
+    }
 }
 
-.row{margin: auto; padding: 5px}
+.row {
+    margin: auto;
+    padding: 5px
+}
 
-.show{
+.show {
     display: block;
 }

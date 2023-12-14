@@ -9,17 +9,22 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping("/text")
 public class ChatController {
     @Value("${openai.token}")
     private String TOKEN_OPEN_AI;
+
     @GetMapping("/chat")
     public ModelAndView telaInicio(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("chat");
         return mv;
     }
-    @PostMapping
+    @ModelAttribute("textGenerate")
+    public TextGenerate textGenerate() {
+        return new TextGenerate();
+    }
+
+    @PostMapping("/text")
     public Object generate(@RequestBody TextGenerate textGenerate, Model model){
         try {
             OpenAiService service = new OpenAiService(TOKEN_OPEN_AI);
