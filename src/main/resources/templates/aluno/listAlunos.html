@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scalet=1.0">
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-    <title>Cadastrar ALuno</title>
+    <title>Lista de Alunos</title>
     <meta name="author" content="Danilo Barreto"/>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/006642858d.js"></script>
@@ -13,9 +13,9 @@
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4527A0">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fca704 ; height: 200px;">
         <a class="navbar-brand" href="#">
-            <img src="img/logo300p.png" width="150px">
+            <img src="\img\RS logo elegante minimalista preto branco e verde musgo (1).png" style="height: 250px;"  alt="Minha Imagem">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
             <span class="navbar-toggler-icon"></span>
@@ -30,18 +30,7 @@
         </div>
 
     </nav>
-    <form th:action="@{/lista-alunos}" method="get">
-        <label>Pesquisar por:</label>
-        <select name="criterio">
-            <option value="nome">Nome</option>
-            <option value="curso">Curso</option>
-            <option value="matricula">Matrícula</option>
-            <option value="status">Status</option>
-            <option value="turno">Turno</option>
-        </select>
-        <input type="text" name="valor" placeholder="Valor da pesquisa">
-        <button type="submit">Pesquisar</button>
-    </form>
+
     
     <div class="container" style="margin-top: 50px">
         <h3>Ultimos alunos Adicionados</h3>
@@ -71,35 +60,16 @@
                     </td>
                 </tr>
             </tbody>
-
-        <script>
-             function confirmarExclusao() {
-        var confirmacao = confirm("Tem certeza de que deseja excluir este aluno?");
-        return confirmacao;
-    }
-       
-    
-
-    
-     </script>
         </table>
-   
     </div>
-   
-
-    
 
 
-    <footer th:fragment="rodape">
-    <div class="rodape">
-        <span>Todo os Direitos Reservados - 2020 &copy; Danilo Barreto</span>
-    </div>
-</footer>
 
     <script src="js/main.js"></script>
     <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    
+
+</header>
 </body>
 
 </html>

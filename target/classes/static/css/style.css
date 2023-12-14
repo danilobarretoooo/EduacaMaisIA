@@ -137,3 +137,7 @@ a.btn-nav:hover{
 }
 
 .row{margin: auto; padding: 5px}
+
+.show{
+    display: block;
+}
