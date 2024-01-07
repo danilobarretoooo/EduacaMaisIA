@@ -38,7 +38,7 @@ public class ChatController {
 
             model.addAttribute("response", service.createCompletion(completionRequest).getChoices());
             model.addAttribute("error", null); // Limpar qualquer mensagem de erro existente
-            return "response"; // Nome do template Thymeleaf (response.html)
+            return "response";
         } catch (Exception e) {
             model.addAttribute("response", null); // Limpar qualquer resposta existente
             model.addAttribute("error", e.getMessage());

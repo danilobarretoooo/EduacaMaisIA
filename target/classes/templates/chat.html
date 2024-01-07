@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Danilo Barreto"/>
+    <title>EducaMaisIA</title>
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntus&family=Work+">
+</head>
+<body>
+<div class="container mt-5" >
+
+    <h1>EducaMaisIAs Chat Interface</h1>
+    <form th:action="@{/chat}" th:object="${textGenerate}" method="post">
+        <div class="form-group">
+            <label for="text">Texto:</label>
+            <input type="text" class="form-conßtrol" id="text" th:field="*{text}" placeholder="Digite seu texto" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Gerar Texto</button>
+    </form>
+
+    <div th:if="${response}" class="mt-4">
+        <h2>Resposta:</h2>
+        <pre th:text="${response}"></pre>
+    </div>
+
+    <div th:if="${error}" class="mt-4 alert alert-danger">
+        <h2>Ocorreu um erro:</h2>
+        <p th:text="${error}"></p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

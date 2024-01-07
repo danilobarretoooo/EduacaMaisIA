@@ -46,6 +46,7 @@ public class AlunoController {
         mv.addObject("alunosList", alunoRepositorio.findAll());
         return mv;
     }
+
     @GetMapping("/alterar/{id}")
     public ModelAndView alterar(@PathVariable("id") Long id){
         ModelAndView mv = new ModelAndView();
@@ -74,6 +75,7 @@ public class AlunoController {
         mv.setViewName("aluno/filtroAluno");
         return mv;
     }
+
     @GetMapping("alunos-ativos")
     public ModelAndView listagemAlunosAtivos(){
         ModelAndView mv = new ModelAndView();
